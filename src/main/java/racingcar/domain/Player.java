@@ -30,4 +30,8 @@ public class Player {
     public String getName() {
         return name;
     }
+
+    public void initCar() {
+        car = new Car();
+    }
 }
