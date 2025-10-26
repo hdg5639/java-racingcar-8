@@ -26,20 +26,9 @@ public class Car {
     }
 
     // 거리 설정
-    public void setDistance() {
-        int number = randomNumber();
-        boolean move = checkMove(number);
-
+    public void setDistance(boolean move) {
         if (move)
             distance++;
-    }
-
-    private boolean checkMove(int number) {
-        return number >= 4;
-    }
-
-    private int randomNumber() {
-        return Randoms.pickNumberInRange(0, 9);
     }
 
     // 거리 조회
