@@ -1,7 +1,5 @@
 package racingcar.domain;
 
-import camp.nextstep.edu.missionutils.Randoms;
-
 public class Car {
     private final String name;
     private int distance;
@@ -13,21 +11,24 @@ public class Car {
         this.winCount = 0;
     }
 
+    // 우승 카운트 적립
     public void addWin() {
         winCount++;
     }
 
+    // 우승 카운트 조회
     public int getWinCount() {
         return winCount;
     }
 
+    // 이름 조회
     public String getName() {
         return name;
     }
 
-    // 거리 설정
-    public void setDistance(boolean move) {
-        if (move)
+    // 이동 시도
+    public void tryMove(int number) {
+        if (number >= 4)
             distance++;
     }
 
